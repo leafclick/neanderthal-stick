@@ -17,17 +17,17 @@
 (def ^:const MAX-SIZE 1000)
 
 (defn- create-uniform [factory size]
-  (with-release [real (random/rand-uniform! 0 MAX-SIZE (vctr native-double size))]
+  (with-release [real (random/rand-uniform! 0.0 (double MAX-SIZE) (vctr native-double size))]
     (transfer! real (vctr factory size))))
 
 (defn create-random-vector [factory size]
   (condp = (entry-type (data-accessor factory))
-    Float/TYPE (random/rand-uniform! 0 MAX-SIZE (vctr factory size))
-    Double/TYPE (random/rand-uniform! 0 MAX-SIZE (vctr factory size))
+    Float/TYPE (random/rand-uniform! 0.0 (double MAX-SIZE) (vctr factory size))
+    Double/TYPE (random/rand-uniform! 0.0 (double MAX-SIZE) (vctr factory size))
     Integer/TYPE (create-uniform native-int size)
     Long/TYPE (create-uniform native-long size)
-    float (random/rand-uniform! 0 MAX-SIZE (vctr factory size))
-    double (random/rand-uniform! 0 MAX-SIZE (vctr factory size))
+    float (random/rand-uniform! 0.0 (double MAX-SIZE) (vctr factory size))
+    double (random/rand-uniform! 0.0 (double MAX-SIZE) (vctr factory size))
     int (create-uniform native-int size)
     long (create-uniform native-long size)))
 
