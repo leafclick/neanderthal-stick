@@ -23,7 +23,7 @@ a factory.
 Add the necessary dependency to your project:
 
 ```$clojure
-    [neanderthal-stick "0.5.0-SNAPSHOT"]
+    [neanderthal-stick "0.5.0"]
 ```
 
 ## Running Tests
@@ -32,7 +32,7 @@ Use the development profile so that the native libraries are available when
 running the Midje test suite:
 
 ```bash
-lein with-profile dev midje
+lein with-profile +dev midje
 ```
 
 ## Usage
