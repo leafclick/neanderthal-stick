@@ -3,8 +3,9 @@
   :url "https://github.com/katox/neanderthal-stick"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
             :url "https://www.eclipse.org/legal/epl-2.0/"}
-  :dependencies [[org.clojure/clojure "1.12.0"]
-                 [neanderthal-stick "0.5.0-SNAPSHOT"]]
+  :dependencies [[org.clojure/clojure "1.12.1"]
+                 [neanderthal-stick "0.5.0"]
+                 [org.bytedeco/mkl "2025.2-1.5.12" :classifier "linux-x86_64-redist"]]
   :repl-options {:init-ns def-new-kind.core}
   :profiles {:java8 {:jvm-opts ^:replace ["-XX:+TieredCompilation" "-XX:TieredStopAtLevel=1"]}}
 
