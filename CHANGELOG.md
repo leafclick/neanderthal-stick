@@ -3,10 +3,11 @@ All notable changes to this project will be documented in this file. This change
 
 ## [Unreleased]
 
+## [0.5.0] - 2025-07-26
 ### Changed
-- Updated to Neanderthal 0.53.2.
-- Tested with Neanderthal 0.54-SNAPSHOT on Macos.
-- Updated to Nippy 3.5.0.
+- Updated to Neanderthal 0.55.0.
+- Tested with Neanderthal 0.55 on Macos.
+- Updated to Nippy 3.6.0.
 - Removed obsolete JVM flag from `project.clj`.
 - Updated README.
 
