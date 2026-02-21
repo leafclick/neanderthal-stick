@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file. This change
 
 ## [Unreleased]
 
+## [0.5.1] - 2026-02-21
+### Changed
+- Updated to Neanderthal 0.60.0.
+- Updated to Nippy 3.6.0.
+- Tested with MKL 2025.2-1.5.12 and CUDA 13.1.
+
 ## [0.5.0] - 2025-07-26
 ### Changed
 - Updated to Neanderthal 0.55.0.

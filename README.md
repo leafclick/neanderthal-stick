@@ -23,7 +23,7 @@ a factory.
 Add the necessary dependency to your project:
 
 ```$clojure
-    [neanderthal-stick "0.5.0"]
+    [neanderthal-stick "0.5.1"]
 ```
 
 ## Running Tests
@@ -331,7 +331,7 @@ from that descriptor and the actual content save and load `transfer!` multimetho
 
 ## License
 
-Copyright © 2019-2025 Kamil Toman
+Copyright © 2019-2026 Kamil Toman
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at

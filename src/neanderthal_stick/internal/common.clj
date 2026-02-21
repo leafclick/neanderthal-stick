@@ -50,3 +50,11 @@
    :matrix-type (core/matrix-type x)
    :n           (core/ncols x)
    :options     {:layout (layout x)}})
+
+(comment
+
+  (require '[uncomplicate.neanderthal.native :refer [fv fge]])
+
+  (def x (fv (range 5)))
+
+  )

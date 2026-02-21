@@ -1,10 +1,11 @@
-(defproject neanderthal-stick "0.5.0"
+(defproject neanderthal-stick "0.5.1"
   :description "Save/Load Extensions for Neanderthal, Fast Clojure Matrix Library"
   :url "https://github.com/katox/neanderthal-stick"
   :license {:name "Eclipse Public License 2.0"
             :url "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html"}
-  :dependencies [[org.clojure/clojure "1.12.1"]
-                 [uncomplicate/neanderthal "0.55.0"]
+  :dependencies [[org.clojure/clojure "1.12.3"]
+                 [org.uncomplicate/neanderthal-base "0.60.0"]
+                 [org.uncomplicate/neanderthal-openblas "0.60.0"]
                  [com.taoensso/nippy "3.6.0"]]
 
   :codox {:metadata {:doc/format :markdown}
@@ -29,10 +30,14 @@
                                  *print-length* 128}
                    :dependencies [[midje "1.10.10"]
                                   [org.clojure/test.check "1.1.1"]
+                                  [org.uncomplicate/neanderthal-mkl "0.60.0"]
+                                  [org.uncomplicate/neanderthal-cuda "0.60.3"]
                                   [org.bytedeco/mkl "2025.2-1.5.12" :classifier "linux-x86_64-redist"]
-                                  [org.bytedeco/cuda "12.9-9.10-1.5.12-SNAPSHOT" :classifier "linux-x86_64-redist"]
-                                  ;[org.bytedeco/mkl "2025.0-1.5.11" :classifier "windows-x86_64-redist"]
-                                  ;[org.bytedeco/cuda "12.9-9.10-1.5.12-SNAPSHOT" :classifier "windows-x86_64-redist"]
+                                  [org.bytedeco/cuda-redist "13.1-9.19-1.5.13-20260206.134933-4" :classifier "linux-x86_64"]
+                                  [org.bytedeco/cuda-redist-cublas "13.1-9.19-1.5.13-20260206.135029-4" :classifier "linux-x86_64"]
+                                  ;[org.bytedeco/mkl "2025.2-1.5.12" :classifier "windows-x86_64-redist"]
+                                  ;[org.bytedeco/cuda-redist "13.1-9.19-1.5.13-20260206.134933-4" :classifier "windows-x86_64"]
+                                  ;[org.bytedeco/cuda-redist-cublas "13.1-9.19-1.5.13-20260206.135029-4" :classifier "windows-x86_64"]
                                   [nrepl/nrepl "1.3.1"]]}
              :java8 {:jvm-opts ^:replace ["-Dclojure.compiler.direct-linking=true"]}}
 
@@ -43,4 +48,6 @@
   :repositories [["sonatype-snapshots" {:id  "SonatypeSnapshots"
                                         :url "https://oss.sonatype.org/content/repositories/snapshots/"}]
                  ["sonatype-releases" {:id  "SonatypeReleases"
-                                       :url "https://oss.sonatype.org/content/repositories/releases/"}]])
+                                       :url "https://oss.sonatype.org/content/repositories/releases/"}]
+                 ["maven-releases" {:id  "MavenReleases"
+                                    :url "https://central.sonatype.com/repository/maven-snapshots"}]])
