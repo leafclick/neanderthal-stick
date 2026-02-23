@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file. This change
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-02-23
+### Changed
+- BREAKING: added to the project group 'com.leafclick'
+- Updated to Neanderthal 0.61.0.
+
 ## [0.5.1] - 2026-02-21
 ### Changed
 - Updated to Neanderthal 0.60.0.

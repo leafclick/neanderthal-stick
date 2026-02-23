@@ -23,7 +23,7 @@ a factory.
 Add the necessary dependency to your project:
 
 ```$clojure
-    [neanderthal-stick "0.5.1"]
+    [com.leafclick/neanderthal-stick "0.6.0"]
 ```
 
 ## Running Tests
